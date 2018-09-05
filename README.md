@@ -25,6 +25,6 @@ Esperamos ajuda-los ao máximo!
 > O PET não é o PET pelo PET. O PET é o PET pela graduação.
 
 #### Links recomendados
- * https://www.geeksforgeeks.org/functions-in-c/
- * https://www.geeksforgeeks.org/pointers-in-c-and-c-set-1-introduction-arithmetic-and-array/
- * https://www.geeksforgeeks.org/structures-c/
+ * [Funções](https://www.geeksforgeeks.org/functions-in-c/)
+ * [Ponteiros](https://www.geeksforgeeks.org/pointers-in-c-and-c-set-1-introduction-arithmetic-and-array/)
+ * [Structs](https://www.geeksforgeeks.org/structures-c/)
