@@ -21,8 +21,9 @@ Este é o valor de ponteiro: 140725846926284
 ~~~
 
 ## Acessando variáveis por referência
-Como já dito, um ponteiro guarda o endereço de uma variável na memória, mas como isso pode nos ajuda?
-Bom, através do endereço podemos acessar o valor da variável de qualquer escopo do programa.
+Como já dito, um ponteiro guarda o endereço de uma variável na memória, mas como isso pode nos ajudar?
+Bom, através do endereço podemos acessar o valor da variável de qualquer função do programa, sem declarar ela globalmente.
+
 ~~~C
 int a = 5;
 int b = 2;
@@ -32,7 +33,7 @@ ptr = a; // Errado! isso muda o endereço para qual o ponteiro aponta para 5.
 ptr = &a; // Atribui o endereço da variavel a no ponteiro
 *ptr = b; // Segue abaixo uma explicação para essa linha
 ~~~
-Você deve ter percebido que o ponteiro estava apontando para o endereço da variável **a**, correto? Ao utilizar (\*) antes do nome da variável, dizemos ao compilador que estamos acessando a posição de memória apontada pelo ponteiro, logo ao atribuir **b** nesta posição de memória, estamos atribuindo **b** em **a**, ou seja, o mesmo que fazer **a = b**.
+Você deve ter percebido que o ponteiro estava apontando para o endereço da variável **a**, correto? Ao utilizar (\*) antes do nome da variável, estamos acessando a posição de memória apontada pelo ponteiro, logo ao atribuir **b** nesta posição de memória, estamos atribuindo **b** em **a**, ou seja, o mesmo que fazer **a = b**.
 
 ## Acessando posições de memória através de ponteiros
 Você pode até se perguntar, mas é só isso? E lhe responderei, não!
@@ -43,12 +44,14 @@ char nome[50];
 ~~~
 tanto **vetor** quanto **nome** são ponteiros! Seria muito custoso armazenar todas essas posições como variáveis separamente, então armazena-se apenas o endereço de inicio destes vetores, assim o operador **[]** indica qual posição a partir daquele endereço você está buscando.
 Este operador não funciona apenas com vetores ou matrizes declarados no inicio do programa, você pode declarar ponteiros e acessar os elementos em posições especificadas por **[]** também!
+
 ~~~C
 int vetor[10];
 int *ptr;
 ptr = vetor; // Vetor também é ponteiro, essa atribuição é válida
 ptr[4] = 3; // Assim vetor[4] == 3
 ~~~
+
 Também é possivel incrementar os ponteiros:
 ~~~C
 int vetor[10];
